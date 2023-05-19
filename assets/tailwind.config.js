@@ -13,6 +13,11 @@ module.exports = {
     extend: {
       colors: {
         brand: "#FD4F00",
+        salmon: "#CA6D68",
+        pink: "#F1C1BD",
+        egg: "#FFFCE7",
+        green: "#2F4B4C",
+        forest: "#182C2B"
       }
     },
   },
