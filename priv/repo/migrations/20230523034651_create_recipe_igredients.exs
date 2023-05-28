@@ -1,4 +1,4 @@
-defmodule GarbanzoBeans.Repo.Migrations.CreateRecipeIgredients do
+defmodule GarbanzoBeans.Repo.Migrations.CreateRecipeIngredients do
   use Ecto.Migration
 
   def change do
