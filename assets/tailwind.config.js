@@ -20,6 +20,9 @@ module.exports = {
         forest: "#182C2B"
       }
     },
+    fontFamily: {
+      allura: ["ALLURA"]
+    }
   },
   plugins: [
     require("@tailwindcss/forms"),

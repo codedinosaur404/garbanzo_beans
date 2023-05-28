@@ -21,9 +21,9 @@ defmodule GarbanzoBeansWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", GarbanzoBeansWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", GarbanzoBeansWeb do
+    pipe_through :api
+  end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
   if Application.compile_env(:garbanzo_beans, :dev_routes) do
