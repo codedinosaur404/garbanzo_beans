@@ -1,0 +1,18 @@
+<.header>
+  Recipe  ingredient <%= @recipe__ingredient.id %>
+  <:subtitle>This is a recipe__ingredient record from your database.</:subtitle>
+  <:actions>
+    <.link href={~p"/recipe_igredients/#{@recipe__ingredient}/edit"}>
+      <.button>Edit recipe__ingredient</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Recipe"><%= @recipe__ingredient.recipe_id %></:item>
+  <:item title="Measurement"><%= @recipe__ingredient.measurement_id %></:item>
+  <:item title="Measurement qty"><%= @recipe__ingredient.measurement_qty_id %></:item>
+  <:item title="Ingredient"><%= @recipe__ingredient.ingredient_id %></:item>
+</.list>
+
+<.back navigate={~p"/recipe_igredients"}>Back to recipe_igredients</.back>

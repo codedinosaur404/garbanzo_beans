@@ -1,0 +1,12 @@
+<.simple_form :let={f} for={@changeset} action={@action}>
+  <.error :if={@changeset.action}>
+    Oops, something went wrong! Please check the errors below.
+  </.error>
+  <.input field={f[:recipe_id]} type="number" label="Recipe" />
+  <.input field={f[:measurement_id]} type="number" label="Measurement" />
+  <.input field={f[:measurement_qty_id]} type="number" label="Measurement qty" />
+  <.input field={f[:ingredient_id]} type="number" label="Ingredient" />
+  <:actions>
+    <.button>Save Recipe  ingredient</.button>
+  </:actions>
+</.simple_form>

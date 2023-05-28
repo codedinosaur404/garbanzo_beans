@@ -18,4 +18,21 @@ defmodule GarbanzoBeans.RecipesFixtures do
 
     recipe
   end
+
+  @doc """
+  Generate a recipe__ingredient.
+  """
+  def recipe__ingredient_fixture(attrs \\ %{}) do
+    {:ok, recipe__ingredient} =
+      attrs
+      |> Enum.into(%{
+        ingredient_id: 42,
+        measurement_id: 42,
+        measurement_qty_id: 42,
+        recipe_id: 42
+      })
+      |> GarbanzoBeans.Recipes.create_recipe__ingredient()
+
+    recipe__ingredient
+  end
 end

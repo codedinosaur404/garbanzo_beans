@@ -1,0 +1,26 @@
+<.header>
+  Listing Recipe igredients
+  <:actions>
+    <.link href={~p"/recipe_igredients/new"}>
+      <.button>New Recipe  ingredient</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.table id="recipe_igredients" rows={@recipe_igredients} row_click={&JS.navigate(~p"/recipe_igredients/#{&1}")}>
+  <:col :let={recipe__ingredient} label="Recipe"><%= recipe__ingredient.recipe_id %></:col>
+  <:col :let={recipe__ingredient} label="Measurement"><%= recipe__ingredient.measurement_id %></:col>
+  <:col :let={recipe__ingredient} label="Measurement qty"><%= recipe__ingredient.measurement_qty_id %></:col>
+  <:col :let={recipe__ingredient} label="Ingredient"><%= recipe__ingredient.ingredient_id %></:col>
+  <:action :let={recipe__ingredient}>
+    <div class="sr-only">
+      <.link navigate={~p"/recipe_igredients/#{recipe__ingredient}"}>Show</.link>
+    </div>
+    <.link navigate={~p"/recipe_igredients/#{recipe__ingredient}/edit"}>Edit</.link>
+  </:action>
+  <:action :let={recipe__ingredient}>
+    <.link href={~p"/recipe_igredients/#{recipe__ingredient}"} method="delete" data-confirm="Are you sure?">
+      Delete
+    </.link>
+  </:action>
+</.table>
