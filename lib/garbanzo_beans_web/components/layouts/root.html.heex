@@ -10,11 +10,40 @@
     <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
     <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
     </script>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
 
+    <header class="text-center bg-forest text-egg">
+      <h1 class="text-8xl font-allura">One Handed Chef</h1>
+    </header>
+
+    <nav>
+      <ul class="flex justify-evenly py-2 bg-green text-egg">
+        <.link
+          class="px-5 py-4 border-2 border-transparent hover:border-2 hover:border-egg"
+          href={~p"/"}
+        >
+          HOME
+        </.link>
+        <.link class="px-5 py-4 border-2 border-transparent hover:border-2 hover:border-egg">
+          THE STRUGGLE
+        </.link>
+        <.link
+          class="px-5 py-4 border-2 border-transparent hover:border-2 hover:border-egg"
+          href={~p"/equipment"}
+        >
+          EQUIPMENT
+        </.link>
+        <.link class="px-5 py-4 border-2 border-transparent hover:border-2 hover:border-egg">
+          TIPS & TRICKS
+        </.link>
+        <.link class="px-5 py-4 border-2 border-transparent hover:border-2 hover:border-egg">
+          RECIPES
+        </.link>
+      </ul>
+    </nav>
   </head>
   <body class="bg-white antialiased">
     <%= @inner_content %>
