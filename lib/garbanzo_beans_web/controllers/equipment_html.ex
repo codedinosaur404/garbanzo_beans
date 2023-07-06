@@ -1,5 +1,5 @@
-defmodule GarbanzoBeansWeb.EquipmentHTML do
+defmodule GarbanzoBeansWeb.StaticPageHTML do
   use GarbanzoBeansWeb, :html
 
-  embed_templates "equipment_html/*"
+  embed_templates("static_pages_html/*")
 end
